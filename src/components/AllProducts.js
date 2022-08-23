@@ -15,9 +15,8 @@ const AllProducts = () => {
         products.map((product) => {
           return (
             <div key={product.id}>
-                    <h2>{product.title}</h2>
+              <h2>{product.title}</h2>
               <h3>{product.brand}</h3>
-          
             </div>
           );
         })
