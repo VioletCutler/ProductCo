@@ -24,6 +24,7 @@
     font-weight: 300;
     font-size: 1.3125rem;
     line-height: 1.6;
+    background-color: var(--clr-primary-300);
   }
   
   *,
@@ -78,6 +79,15 @@
   .container {
       margin-inline: auto;
       width: min(90%, 70.5rem);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+  }
+
+  section {
+    width: max(30%, 30rem)
   }
   
   .text-center {
@@ -99,6 +109,13 @@
     position:relative;
     min-height: 30em;
     padding: 100px, 20vw
+  }
+
+  nav {
+    padding: 1em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
   }
   
   @media (min-width: 40em) {

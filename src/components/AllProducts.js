@@ -10,14 +10,16 @@ const AllProducts = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       {products ? (
         products.map((product) => {
           return (
-            <div key={product.id}>
-              <h2>{product.title}</h2>
-              <h3>{product.brand}</h3>
-            </div>
+            <section key={product.id}>
+              <img src={product.thumbnail}></img>
+              <h2>{product.brand} {product.title}</h2>
+              <p>{product.description}</p>
+
+            </section>
           );
         })
       ) : (
