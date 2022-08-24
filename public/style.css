@@ -1,15 +1,24 @@
 :root {
-  --clr-primary-50:#f7cfd6;
-  --clr-primary-100:#f9b9c5;
-  --clr-primary-400: #d1586e;
+  --clr-primary-50: #fbdfe4;
+  --clr-primary-100: #f4c7cf;
+  --clr-primary-200: #edb5bf;
+  --clr-primary-300: #e38d9d;
+  --clr-primary-400: #da7084;
   --clr-primary-500: #be4b61;
-  --clr-primary-variant: rgb(136, 52, 69);
+  --clr-primary-600: rgb(136, 52, 69);
+  --clr-primary-700: rgb(91, 26, 40);
+  --clr-primary-800: rgb(70, 18, 29);
+  --clr-primary-900: rgb(30, 7, 12);
 
+  --clr-secondary-100: #f8f9fe;
+  --clr-secondary-200: #e1e4f7;
+  --clr-secondary-300: #cfd3f4;
+  --clr-secondary-400: #b7bdf6;
   --clr-secondary-500: #9198e5;
-  --clr-secondary-variant: #7075b2;
+  --clr-secondary-600: #7075b2;
 
-  --clr-background: #eeece0;
-  --clr-error:#f8002d;
+  --clr-background: #faf9f3;
+  --clr-error: #f8002d;
 
   --clr-neutral-100: #fffaf5;
   --clr-neutral-200: #dbd7d4;
@@ -62,9 +71,9 @@ p {
 }
 
 header {
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 3rem 1rem 3rem 1rem;
   color: var(--clr-neutral-100);
-  background: linear-gradient(var(--clr-secondary-500),var(--clr-primary-500));
+  background: linear-gradient(var(--clr-secondary-500), var(--clr-primary-500));
   display: flex;
   justify-content: center;
   font-size: 4ch;
@@ -76,19 +85,30 @@ header {
   top: 0;
   width: 100%;
   z-index: 999;
-  border-style: solid none solid none
+  border-style: solid none solid none;
+  background-color: var(--clr-primary-500);
 }
 
 nav {
+  margin-left:1em;
+  width: 45%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--clr-primary-500);
-  border-style: solid none none none
 }
 
 nav > * {
-  margin-left: 2em;
-  margin-right: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4em;
+  min-width: 1rem;
+  border-style:solid transparent;
+}
+
+.nav-a:hover {
+  border-style:solid;
 }
 
 .title {
@@ -97,8 +117,8 @@ nav > * {
 }
 
 .page {
-  padding-top:10rem;
-  display:flex;
+  padding-top: 15rem;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -147,15 +167,17 @@ section {
   border-style: solid;
   border-width: 3px;
   background-color: var(--clr-neutral-100);
-  }
+}
 
-
+.productLink {
+  color:#070600;
+}
 
 :link {
-  color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
 }
 :visited {
-  color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
 }
 
 @media (max-width: 40rem) {
