@@ -18,7 +18,7 @@ const AllProducts = ({ products }) => {
                 <Link className='productLink' to={`/products/${product.id}`}>
                   {product.brand} {product.title}
                 </Link>
-                <p>{product.description}</p>
+                <p>Description: {product.description}</p>
               </section>
             );
           })
