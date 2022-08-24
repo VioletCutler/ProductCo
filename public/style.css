@@ -1,133 +1,166 @@
 :root {
-    /* original
+  /* original
     --clr-primary-300: #f3eed9;
     --clr-primary-400: #824936;
     --clr-neutral-100: #fff;
     --clr-neutral-900: #222c2a;
     */
-  
-    --clr-primary-300: ##FFFFE3;
-    --clr-primary-400: #BE4B61;
-  
-    --clr-neutral-100: #fffaf5;
-    --clr-neutral-900: #263834;
-  
-    --clr-text-light: ;
-    --clr-text-dark: ;
-  
-    --ff-primary: "IBM Plex Sans", sans-serif;
-    --ff-accent: ;
-  }
-  
-  body {
-    font-family: var(--ff-primary);
-    font-weight: 300;
-    font-size: 1.3125rem;
-    line-height: 1.6;
-    background-color: var(--clr-primary-300);
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  
-  body,
-  img,
-  h1,
-  h2,
-  h3,
-  p {
-    margin: 0;
-  }
-  
-  h1,
-  h2,
-  h3 {
-      color: var(--clr-primary-400);
-    line-height: 1;
-    font-weight: 900;
-    margin-bottom: .5em;
-  }
-  
-  h2, h3, p {
-      margin-top: 1em;
-      margin-bottom: 1em;
-  }
-  
-  .bg-light {
-    background-color: var(--clr-primary-300);
-  }
-  .bg-dark {
-      color: var(--clr-neutral-100);
-      background-color: var(--clr-neutral-900);
-    }
-  .bg-primary {
-    color: var(--clr-neutral-100);
-    background-color: var(--clr-primary-400);
-  }
-  .bg-primary h2, 
-  .bg-dark h2 {
-      color: var(--clr-primary-300)
-  }
-  
-  header, section {
-      padding: 3rem 0;
-  }
-  
+
+  --clr-primary-300: ##ffffe3;
+  --clr-primary-400: #be4b61;
+
+  --clr-neutral-100: #fffaf5;
+  --clr-neutral-900: #263834;
+
+  --clr-text-light: ;
+  --clr-text-dark: ;
+
+  --ff-primary: "IBM Plex Sans", sans-serif;
+  --ff-accent: ;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: 300;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+  background-color: var(--clr-primary-300);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+img,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+header {
+  color: var(--clr-primary-400);
+  line-height: 1;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+}
+
+h2,
+h3,
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.bg-light {
+  background-color: var(--clr-primary-300);
+}
+.bg-dark {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+.bg-primary {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+}
+.bg-primary h2,
+.bg-dark h2 {
+  color: var(--clr-primary-300);
+}
+
+header {
+  padding: 1rem 1rem 1rem 1rem;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 4ch;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em;
+  padding-top: 10rem;
+}
+
+.container > * {
+  flex: 1 1 33%;
+}
+
+.appContainer {
+  display: flex;
+}
+
+section {
+  padding: 2em;
+  min-width: 15em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.splitParent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  position: relative;
+  min-height: 30em;
+  padding: 100px, 20vw;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--clr-neutral-900);
+}
+
+nav > * {
+  margin-left: 2em;
+  flex: 1;
+}
+
+:link {
+  color: var(--clr-neutral-100);
+}
+:visited {
+  color: var(--clr-neutral-100);
+}
+
+@media (max-width: 40rem) {
   .container {
-      margin-inline: auto;
-      width: min(90%, 70.5rem);
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-around;
+    flex-direction: column;
   }
 
-  section {
-    width: max(30%, 30rem)
-  }
-  
-  .text-center {
-      text-align: center;
-  }
-  
-  img {
-      max-width: 100%;
-      display: block;
-  }
-  
-  .splitParent {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  
-  section {
-    position:relative;
-    min-height: 30em;
-    padding: 100px, 20vw
+  .container > * {
+    flex: 1 1 33%;
   }
 
-  nav {
-    padding: 1em;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+  .container > * + * {
+    margin-left: 2em;
   }
-  
-  @media (min-width: 40em) {
-      .splitParent {
-          flex-direction: row;
-      }
-  
-      .splitParent > * {
-          flex-basis: 100%;
-      }
-  
-      .splitParent > * + * {
-          margin-left: 2em;
-      }
-  }
+}
