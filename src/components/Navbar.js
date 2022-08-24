@@ -8,9 +8,9 @@ const Navbar = () => {
         <i>Product Company</i>
       </header>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/products/phones">Phones</Link>
+        <Link className="nav-a" to="/">Home</Link>
+        <Link className="nav-a" to="/products">All Products</Link>
+        <Link className="nav-a" to="/products/phones">Phones</Link>
       </nav>
     </div>
   );

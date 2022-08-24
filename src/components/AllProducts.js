@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { getAllProducts } from "../api";
+import React from "react";
+import {
+  Link
+} from 'react-router-dom'
 
-const AllProducts = () => {
-  const [products, setProducts] = useState([]);
-  console.log("products", products);
 
-  useEffect(() => {
-    getAllProducts().then((fetchedProducts) => setProducts(fetchedProducts));
-  }, []);
+const AllProducts = ({ products }) => {
 
   return (
     <div className='page'>
@@ -18,9 +15,9 @@ const AllProducts = () => {
             return (
               <section key={product.id}>
                 <img src={product.thumbnail}></img>
-                <h2>
+                <Link className='productLink' to={`/products/${product.id}`}>
                   {product.brand} {product.title}
-                </h2>
+                </Link>
                 <p>{product.description}</p>
               </section>
             );
