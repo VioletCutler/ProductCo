@@ -1,16 +1,19 @@
 :root {
-  /* original
-    --clr-primary-300: #f3eed9;
-    --clr-primary-400: #824936;
-    --clr-neutral-100: #fff;
-    --clr-neutral-900: #222c2a;
-    */
+  --clr-primary-50:#f7cfd6;
+  --clr-primary-100:#f9b9c5;
+  --clr-primary-400: #d1586e;
+  --clr-primary-500: #be4b61;
+  --clr-primary-variant: rgb(136, 52, 69);
 
-  --clr-primary-300: #ffffe3;
-  --clr-primary-400: #be4b61;
+  --clr-secondary-500: #9198e5;
+  --clr-secondary-variant: #7075b2;
+
+  --clr-background: #eeece0;
+  --clr-error:#f8002d;
 
   --clr-neutral-100: #fffaf5;
-  --clr-neutral-900: #263834;
+  --clr-neutral-200: #dbd7d4;
+  --clr-neutral-900: #070600;
 
   --clr-text-light: ;
   --clr-text-dark: ;
@@ -24,7 +27,7 @@ body {
   font-weight: 300;
   font-size: 1.3125rem;
   line-height: 1.6;
-  background-color: var(--clr-primary-300);
+  background-color: var(--clr-background);
 }
 
 *,
@@ -46,7 +49,6 @@ h1,
 h2,
 h3,
 header {
-  color: var(--clr-primary-400);
   line-height: 1;
   font-weight: 900;
   margin-bottom: 0.5em;
@@ -59,30 +61,14 @@ p {
   margin-bottom: 1em;
 }
 
-.bg-light {
-  background-color: var(--clr-primary-300);
-}
-.bg-dark {
-  color: var(--clr-neutral-100);
-  background-color: var(--clr-neutral-900);
-}
-.bg-primary {
-  color: var(--clr-neutral-100);
-  background-color: var(--clr-primary-400);
-}
-.bg-primary h2,
-.bg-dark h2 {
-  color: var(--clr-primary-300);
-}
-
 header {
   padding: 1rem 1rem 1rem 1rem;
   color: var(--clr-neutral-100);
-  background-color: var(--clr-primary-400);
-  margin: 0;
+  background: linear-gradient(var(--clr-secondary-500),var(--clr-primary-500));
   display: flex;
   justify-content: center;
   font-size: 4ch;
+  margin: 0;
 }
 
 #header {
@@ -91,6 +77,18 @@ header {
   width: 100%;
   z-index: 999;
   border-style: solid none solid none
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--clr-primary-500);
+  border-style: solid none none none
+}
+
+nav > * {
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .title {
@@ -145,23 +143,13 @@ img {
 section {
   margin: 1px;
   position: relative;
-  min-height: 30em;
   padding: 100px, 20vw;
   border-style: solid;
   border-width: 3px;
+  background-color: var(--clr-neutral-100);
   }
 
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(142, 146, 154);
-  border-style: solid none none none
-}
 
-nav > * {
-  margin-left: 2em;
-  margin-right: 2em;
-}
 
 :link {
   color: var(--clr-neutral-100);
