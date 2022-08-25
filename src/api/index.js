@@ -19,3 +19,13 @@ export const getProductById = async (id) => {
     console.log(error);
   }
 };
+
+export const searchProducts = async (searchQuery) => {
+  try {
+    const response = await fetch(`${URL}/products/search?q=${searchQuery}`);
+    const data = await response.json();
+    return data.products;
+  } catch (error) {
+    console.log(error);
+  }
+};
